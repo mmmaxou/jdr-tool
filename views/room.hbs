@@ -1,0 +1,103 @@
+<main>
+  <div class="container">
+    {{#if room}}
+
+    <div class="row">
+      <h1 class="white-text">Salle {{room.name}}</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+      {{#each room.players}}
+      <div class="col l4 m6 s12">
+        <div class="card z-depth-3" id="{{@key}}">
+          <div class="card-content flex">
+            <!-- Nom -->
+            <div class="card-title red-text name">{{this.name}}</div>
+            <!-- Classe -->
+            <div class="chip">
+              <i class="material-icons icon indigo-text">group</i>
+              <span class="class">{{this.class}}</span>
+            </div>
+            <!-- Race -->
+            <div class="chip">
+              <i class="material-icons icon indigo-text">person</i>
+              <span class="race">{{this.race}}</span>
+            </div>
+            <!-- Niveau -->
+            <div class="chip">
+              <i class="material-icons icon amber-text">star</i> Niveau :
+              <span class="level">{{this.level}}</span>
+            </div>
+            <!-- HP -->
+            <div class="chip">
+              <i class="material-icons icon red-text">favorite</i> Vie :
+              <span class="hp">{{this.hp}} / {{this.hpMax}}</span>
+            </div>
+            <!-- Force -->
+            <div class="chip">
+              <img class="icon" src="images/force.png" alt="Force">
+              <span class="force">FOR : {{this.force}}</span>
+            </div>
+            <!-- Dext -->
+            <div class="chip">
+              <img class="icon" src="images/exercise.png" alt="dext">
+              <span class="dext">DEXT : {{this.dext}}</span>
+            </div>
+            <!-- Constitution -->
+            <div class="chip">
+              <img class="icon" src="images/constitution.png" alt="Constitution">
+              <span class="con">CON : {{this.con}}</span>
+            </div>
+            <!-- Intelligence -->
+            <div class="chip">
+              <img class="icon" src="images/intelligence.png" alt="Intelligence">
+              <span class="int">INT : {{this.int}}</span>
+            </div>
+            <!-- Sagesse -->
+            <div class="chip">
+              <img class="icon" src="images/sagesse.png" alt="Sagesse">
+              <span class="sag">SAG : {{this.sag}}</span>
+            </div>
+            <!-- Charisme -->
+            <div class="chip">
+              <img class="icon" src="images/charisme.png" alt="Charisme">
+              <span class="char">CHAR : {{this.char}}</span>
+            </div>
+
+            <ul class="collapsible popout" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header"><i class="material-icons teal-text">fingerprint</i>Dons</div>
+                <div class="collapsible-body"><span class="dons">{{this.dons}}</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons pink-text accent-2">stars</i>Compétences</div>
+                <div class="collapsible-body"><span class="skills">{{this.skills}}</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons deep-purple-text">shopping_basket</i>Equipement</div>
+                <div class="collapsible-body"><span class="stuff">{{this.stuff}}</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons brown-text">pets</i>Animaux et Compagnons</div>
+                <div class="collapsible-body"><span class="pets">{{this.pets}}</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons green-text">explore</i>Description</div>
+                <div class="collapsible-body"><span class="description">{{this.description}}</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    {{else}}
+
+    <h1>Cette salle n'existe pas !</h1>
+    <h3><a href="/">Retour à l'acceuil</a></h3>
+
+    {{/if}}
+  </div>
+</main>
+<script src="js/room.js"></script>

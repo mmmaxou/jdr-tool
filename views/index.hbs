@@ -1,0 +1,22 @@
+<main>
+  <div class="container">
+    <div class="row">
+
+      <!--   Parties existantes -->
+      <div class="col l4 m6 s12">
+        <div class="card z-depth-3">
+          <div class="card-content">
+            <div class="card-title ">
+              Rejoindre une partie
+            </div>
+            {{#each rooms}}
+            <a href="/room-{{this.id}}">
+            {{this.name}}
+            </a> {{/each}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

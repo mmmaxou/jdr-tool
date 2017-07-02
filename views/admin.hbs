@@ -1,0 +1,63 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <h1 class="white-text">Panel administrateur</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="row section">
+      <!--   Créer une partie -->
+      <div class="col l4 m6 s12">
+        <div class="card z-depth-3">
+          <div class="card-content red ligten-2">
+            <div class="card-title activator white-text">
+              Créer une partie
+              <i class="material-icons right">add</i>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <div class="card-title activator">
+              Annuler
+              <i class="material-icons right">cancel</i>
+            </div>
+            <div class="row">
+              <form class="col s12" action="/create" method="post">
+                <div class="row">
+                  <div class="input-field col s12 l9">
+                    <input required id="name" name="name" type="text" class="validate" value="Mi">
+                    <label for="name">Titre de la partie</label>
+                  </div>
+                  <div class="input-field col s12 l3">
+                    <input required id="number" name="number" type="number" min="0" max="12" class="validate" value="4">
+                    <label for="number">Nombre de joueurs</label>
+                  </div>
+                  <button class="btn waves-effect waves-light right" type="submit" name="action">Créer
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--   Parties existantes -->
+      <div class="col l4 m6 s12">
+        <div class="card z-depth-3">
+          <div class="card-content">
+            <div class="card-title activator">
+              Editer des parties
+            </div>
+          </div>
+          <div class="card-reveal">
+            <div class="card-title activator">
+              Parties existantes :
+            </div>
+            {{#each rooms}}
+            <a href="/admin-room-{{this.id}}">
+            {{this.name}}
+            </a> {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

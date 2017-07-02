@@ -1,0 +1,87 @@
+.col {
+  transition: all 400ms ease;
+}
+
+*[contenteditable] {
+  border: 3px dashed lightgrey;
+  padding: 3px 6px;
+}
+
+.flex .chip {
+  position: relative;
+}
+
+i.icon {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+img.icon {
+  position: absolute;
+  left: 13px;
+}
+
+.chip img {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transform: scale(0.8);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex>* {
+  width: 100%;
+  text-align: center;
+}
+
+.collapsible {
+  width: calc(100% + 48px) !important;
+  margin-left: -24px;
+  margin-right: -24px;
+  text-align: left;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  position: relative;
+  background-color: rgba(7, 7, 7, 0.3);
+}
+
+h1,
+h2,
+.brand-logo,
+.pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+nav,
+.page-footer {
+  background-color: transparent;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.overlay.white-overlay {
+  background-color: white;
+}
+
+.overlay.under-overlay {
+  z-index: -2;
+}

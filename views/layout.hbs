@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+  <!--  JQUERY -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--  Scripts-->
+  <script src="js/granim/granim.min.js"></script>
+  <script src="js/socket.io.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  
+</head>
+
+<body>
+  <canvas class="overlay under-overlay" id="full-gradient"></canvas>
+  <header id="header">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" data-activates="mobile-nav-connection" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="/" class="brand-logo center large">JDR Tools</a>
+        <ul class="right hide-on-med-and-down nav-connection">
+        </ul>
+        <ul class="side-nav nav-connection" id="mobile-nav-connection">
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  {{{body}}}
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="black-text black-text">JDR Tools</h5>
+          <p class="grey-text text-darken-4">Le jdr comme jaja</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="black-text">Crédits</h5>
+          <ul>
+            <li><a href="https://icons8.com" class="grey-text text-darken-3">Icon pack by Icons8</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container black-text">
+        © 2014 Copyright mmmaxou
+        <a class="grey-text text-darken-4 right" href="https://github.com/mmmaxou">Github</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

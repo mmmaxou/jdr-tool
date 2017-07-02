@@ -1,0 +1,167 @@
+<main>
+  <div class="container">
+    {{#if room}}
+
+    <div class="row">
+      <h1 class="white-text">Salle {{room.name}}</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+      {{#each room.players}}
+      <div class="col l4 m6 s12">
+        <div class="card z-depth-3" id="{{@key}}">
+          <div class="card-content">
+            <!-- Name -->
+            <p class="card-title red-text">
+              <span contenteditable="true" class="name field">{{this.name}}</span>
+              <i class="material-icons right">edit</i>
+            </p>
+            <div class="divider"></div>
+
+            <!-- Classe -->
+            <div class="input-field">
+              <i class="material-icons prefix indigo-text">group</i>
+              <input type="text" class="class field" value="{{this.class}}">
+              <label for="class">Classe</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Race -->
+            <div class="input-field">
+              <i class="material-icons prefix indigo-text">person</i>
+              <input type="text" class="race field" value="{{this.race}}">
+              <label for="class">Race</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Level -->
+            <div class="input-field">
+              <i class="material-icons prefix amber-text">star</i>
+              <input type="number" class="level field" value="{{this.level}}">
+              <label for="level">Niveau</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Hp -->
+            <div class="input-field">
+              <i class="material-icons prefix red-text">favorite</i>
+              <input type="number" class="hp field" value="{{this.hp}}">
+              <label for="hp">Hp</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- HpMax -->
+            <div class="input-field">
+              <i class="material-icons prefix red-text">favorite</i>
+              <input type="number" class="hpMax field" value="{{this.hpMax}}">
+              <label for="hpMax">Hp Max</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Force -->
+            <div class="input-field">
+              <img src="images/force.png" class="prefix" alt="Force">
+              <input type="number" class="force field" value="{{this.force}}">
+              <label for="force">Force</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Dext -->
+            <div class="input-field">
+              <img src="images/exercise.png" class="prefix" alt="Dext">
+              <input type="number" class="dext field" value="{{this.dext}}">
+              <label for="dext">Dext</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Constitution -->
+            <div class="input-field">
+              <img src="images/constitution.png" class="prefix" alt="Constitution">
+              <input type="number" class="con field" value="{{this.con}}">
+              <label for="con">Constitution</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Intelligence -->
+            <div class="input-field">
+              <img src="images/intelligence.png" class="prefix" alt="Intelligence">
+              <input type="number" class="int field" value="{{this.int}}">
+              <label for="int">Intelligence</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Sagesse -->
+            <div class="input-field">
+              <img src="images/sagesse.png" class="prefix" alt="Sagesse">
+              <input type="number" class="sag field" value="{{this.sag}}">
+              <label for="sag">Sagesse</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Charisme -->
+            <div class="input-field">
+              <img src="images/charisme.png" class="prefix" alt="Charisme">
+              <input type="number" class="char field" value="{{this.char}}">
+              <label for="char">Charisme</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Dons -->
+            <div class="input-field">
+              <i class="material-icons prefix teal-text">fingerprint</i>
+              <textarea class="materialize-textarea field dons">{{this.dons}}</textarea>
+              <label for="dons">Dons</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- skills -->
+            <div class="input-field">
+            <i class="material-icons prefix pink-text accent-2">stars</i>
+              <textarea class="materialize-textarea field skills">{{this.skills}}</textarea>
+              <label for="skills">Compétences</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- stuff -->
+            <div class="input-field">
+            <i class="material-icons prefix deep-purple-text">shopping_basket</i>
+              <textarea class="materialize-textarea field stuff">{{this.stuff}}</textarea>
+              <label for="stuff">Equipement</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Pets -->
+            <div class="input-field">
+            <i class="material-icons prefix brown-text">pets</i>
+              <textarea class="materialize-textarea field pets">{{this.pets}}</textarea>
+              <label for="pets">Animaux</label>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Description -->
+            <div class="input-field">
+            <i class="material-icons prefix green-text">explore</i>
+              <textarea class="materialize-textarea field description">{{this.description}}</textarea>
+              <label for="description">Description</label>
+            </div>
+            <div class="divider"></div>
+            
+
+
+
+
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    {{else}}
+
+    <h1>Cette salle n'existe pas !</h1>
+    <h3><a href="/">Retour à l'acceuil</a></h3>
+
+    {{/if}}
+  </div>
+</main>
+<script src="js/admin.js" type="application/javascript"></script>
