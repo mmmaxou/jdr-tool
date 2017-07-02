@@ -15,7 +15,8 @@ $(document).ready(function () {
 
 function change(e) {
   var $this = $(e.target)
-  var t = $this.text() || $this.val()
+  console.log('$this:', $this);
+  var t = $this.val() || $this.text()
   var id = $this.parents('.card').attr('id')
   var selector = $this.attr('class')
     .replace('field', '')
