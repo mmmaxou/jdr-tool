@@ -16,10 +16,11 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!--  Scripts-->
   <script src="js/granim/granim.min.js"></script>
+  <script src="js/roll.js"></script>
   <script src="js/socket.io.min.js"></script>
   <script src="js/materialize.min.js"></script>
   <script src="js/init.js"></script>
-  
+
 </head>
 
 <body>
@@ -32,13 +33,27 @@
         <ul class="right hide-on-med-and-down nav-connection">
         </ul>
         <ul class="side-nav nav-connection" id="mobile-nav-connection">
+          <a class="waves-effect waves-light btn" href="#dice">Jet de dés</a>
         </ul>
       </div>
     </nav>
   </header>
 
 
-  {{{body}}}
+  {{{body}}} {{> modals}}
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">settings</i>
+    </a>
+    <ul>
+      <li>
+        <a class="waves-effect waves-light green btn-floating" href="#dice">
+          <img src="images/dice.png" alt="Dice">
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <footer class="page-footer">
     <div class="container">

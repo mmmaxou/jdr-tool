@@ -58,6 +58,14 @@
             </div>
             <div class="divider"></div>
 
+            <!-- Speed -->
+            <div class="input-field">
+              <img class="prefix" src="images/speed.png" alt="Speed">
+              <input type="number" class="speed field" value="{{this.speed}}">
+              <label for="speed">Vitesse</label>
+            </div>
+            <div class="divider"></div>
+
             <!-- Force -->
             <div class="input-field">
               <img src="images/force.png" class="prefix" alt="Force">
@@ -106,6 +114,25 @@
             </div>
             <div class="divider"></div>
 
+            <!-- Classe d'armure -->
+            <label>Classe d'armure</label>
+            <div class="input-field">
+              <img src="images/shield.png" class="prefix" alt="Armure">
+              <select class="armorClass">
+                <option value="" disabled selected >Quel type ?</option>
+                <option value="light" {{#if this.armor.light}} selected {{/if}} >Armure légère</option>
+                <option value="medium" {{#if this.armor.medium}} selected {{/if}} >Armure intermédiaire</option>
+                <option value="heavy" {{#if this.armor.heavy}} selected {{/if}} >Armures lourde</option>
+                <option value="fixe" {{#if this.armor.fixe}} selected {{/if}} >Valeure fixe</option>
+              </select>
+              <label for="armorClass">Type d'armure</label>
+            </div>
+            <div class="input-field">
+              <input type="number" class="armor" value="{{this.armor.value}}">
+              <label for="armor">Valeur d'armure</label>
+            </div>
+            <div class="divider"></div>
+
             <!-- Dons -->
             <div class="input-field">
               <i class="material-icons prefix teal-text">fingerprint</i>
@@ -116,15 +143,23 @@
 
             <!-- skills -->
             <div class="input-field">
-            <i class="material-icons prefix pink-text accent-2">stars</i>
+              <i class="material-icons prefix pink-text accent-2">stars</i>
               <textarea class="materialize-textarea field skills">{{this.skills}}</textarea>
               <label for="skills">Compétences</label>
             </div>
             <div class="divider"></div>
 
+            <!-- skills -->
+            <div class="input-field">
+              <i class="material-icons prefix green-text">stars</i>
+              <textarea class="materialize-textarea field capacity">{{this.capacity}}</textarea>
+              <label for="capacity">Capacités</label>
+            </div>
+            <div class="divider"></div>
+
             <!-- stuff -->
             <div class="input-field">
-            <i class="material-icons prefix deep-purple-text">shopping_basket</i>
+              <i class="material-icons prefix deep-purple-text">shopping_basket</i>
               <textarea class="materialize-textarea field stuff">{{this.stuff}}</textarea>
               <label for="stuff">Equipement</label>
             </div>
@@ -132,24 +167,27 @@
 
             <!-- Pets -->
             <div class="input-field">
-            <i class="material-icons prefix brown-text">pets</i>
+              <i class="material-icons prefix brown-text">pets</i>
               <textarea class="materialize-textarea field pets">{{this.pets}}</textarea>
               <label for="pets">Animaux</label>
             </div>
             <div class="divider"></div>
 
+            <!-- Skills -->
+            <div class="input-field">
+              <i class="material-icons prefix blue-text">whatshot</i>
+              <textarea class="materialize-textarea field spells">{{this.spells}}</textarea>
+              <label for="spells">Sorts</label>
+            </div>
+            <div class="divider"></div>
+
             <!-- Description -->
             <div class="input-field">
-            <i class="material-icons prefix green-text">explore</i>
+              <i class="material-icons prefix green-text">explore</i>
               <textarea class="materialize-textarea field description">{{this.description}}</textarea>
               <label for="description">Description</label>
             </div>
             <div class="divider"></div>
-            
-
-
-
-
           </div>
         </div>
       </div>

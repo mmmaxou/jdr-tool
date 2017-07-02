@@ -1,5 +1,12 @@
 $(document).ready(function () {
   $('.button-collapse').sideNav();
+  $('select').material_select();
+  $('.modal').modal();
+  $('.rollDice').click(function () {
+    var result = rollDice($(this).text())
+    var selector = $(this).attr("data-result-selector")
+    $(selector).text(result.result)
+  })
   var granimGradients = [
                 ['#ffb347', '#ffcc33'],
                 ['#beff56', '#72ff33'],

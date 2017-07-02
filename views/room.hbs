@@ -28,61 +28,108 @@
               <i class="material-icons icon amber-text">star</i> Niveau :
               <span class="level">{{this.level}}</span>
             </div>
+            <!-- MOD niveau -->
+            <div class="chip chip-right">
+              <span class="mod_level">{{this.mod.level}}</span>
+            </div>
             <!-- HP -->
             <div class="chip">
               <i class="material-icons icon red-text">favorite</i> Vie :
               <span class="hp">{{this.hp}}</span> / <span class="hpMax">{{this.hpMax}}</span>
             </div>
+            <!-- HP -->
+            <div class="chip">
+              <img class="icon" src="images/speed.png" alt="Speed"> Vitesse :
+              <span class="speed">{{this.speed}}</span><span> m/s</span>
+            </div>
             <!-- Force -->
             <div class="chip">
-              <img class="icon" src="images/force.png" alt="Force">
-              FOR : <span class="force">{{this.force}}</span>
+              <img class="icon" src="images/force.png" alt="Force"> FOR : <span class="force">{{this.force}}</span>
+            </div>
+            <!-- MOD Force -->
+            <div class="chip chip-right">
+              <span class="mod_force">{{this.mod.force}}</span>
             </div>
             <!-- Dext -->
             <div class="chip">
-              <img class="icon" src="images/exercise.png" alt="dext">
-              DEXT : <span class="dext">{{this.dext}}</span>
+              <img class="icon" src="images/exercise.png" alt="dext"> DEXT : <span class="dext">{{this.dext}}</span>
+            </div>
+            <!-- MOD Dext -->
+            <div class="chip chip-right">
+              <span class="mod_dext">{{this.mod.dext}}</span>
             </div>
             <!-- Constitution -->
             <div class="chip">
-              <img class="icon" src="images/constitution.png" alt="Constitution">
-              CON : <span class="con">{{this.con}}</span>
+              <img class="icon" src="images/constitution.png" alt="Constitution"> CON : <span class="con">{{this.con}}</span>
+            </div>
+            <!-- MOD Constitution -->
+            <div class="chip chip-right">
+              <span class="mod_con">{{this.mod.con}}</span>
             </div>
             <!-- Intelligence -->
             <div class="chip">
-              <img class="icon" src="images/intelligence.png" alt="Intelligence">
-              INT : <span class="int">{{this.int}}</span>
+              <img class="icon" src="images/intelligence.png" alt="Intelligence"> INT : <span class="int">{{this.int}}</span>
+            </div>
+            <!-- MOD Intelligence -->
+            <div class="chip chip-right">
+              <span class="mod_int">{{this.mod.int}}</span>
             </div>
             <!-- Sagesse -->
             <div class="chip">
-              <img class="icon" src="images/sagesse.png" alt="Sagesse">
-              SAG : <span class="sag">{{this.sag}}</span>
+              <img class="icon" src="images/sagesse.png" alt="Sagesse"> SAG : <span class="sag">{{this.sag}}</span>
+            </div>
+            <!-- MOD Sagesse -->
+            <div class="chip chip-right">
+              <span class="mod_sag">{{this.mod.sag}}</span>
             </div>
             <!-- Charisme -->
             <div class="chip">
-              <img class="icon" src="images/charisme.png" alt="Charisme">
-              CHAR : <span class="char">{{this.char}}</span>
+              <img class="icon" src="images/charisme.png" alt="Charisme"> CHAR : <span class="char">{{this.char}}</span>
+            </div>
+            <!-- MOD Charisme -->
+            <div class="chip chip-right">
+              <span class="mod_char">{{this.mod.char}}</span>
+            </div>
+            <!-- Armor -->
+            <div class="chip">
+             <img class="icon" src="images/shield.png" alt="Armure">
+              CA : <span class="armor_total">{{this.armor.total}}</span>
             </div>
 
             <ul class="collapsible popout" data-collapsible="accordion">
+              <!-- Dons -->
               <li>
                 <div class="collapsible-header"><i class="material-icons teal-text">fingerprint</i>Dons</div>
                 <div class="collapsible-body"><span class="dons">{{this.dons}}</span></div>
               </li>
+              <!-- Compétences -->
               <li>
                 <div class="collapsible-header"><i class="material-icons pink-text accent-2">stars</i>Compétences</div>
                 <div class="collapsible-body"><span class="skills">{{this.skills}}</span></div>
               </li>
+              <!-- Capacités -->
+              <li>
+                <div class="collapsible-header"><i class="material-icons green-text">stars</i>Capacités</div>
+                <div class="collapsible-body"><span class="capacity">{{this.capacity}}</span></div>
+              </li>
+              <!-- Equipement -->
               <li>
                 <div class="collapsible-header"><i class="material-icons deep-purple-text">shopping_basket</i>Equipement</div>
                 <div class="collapsible-body"><span class="stuff">{{this.stuff}}</span></div>
               </li>
+              <!-- Pets -->
               <li>
                 <div class="collapsible-header"><i class="material-icons brown-text">pets</i>Animaux et Compagnons</div>
                 <div class="collapsible-body"><span class="pets">{{this.pets}}</span></div>
               </li>
+              <!-- Sorts -->
               <li>
-                <div class="collapsible-header"><i class="material-icons green-text">explore</i>Description</div>
+                <div class="collapsible-header"><i class="material-icons blue-text">whatshot</i>Sorts</div>
+                <div class="collapsible-body"><span class="spells">{{this.spells}}</span></div>
+              </li>
+              <!-- Description -->
+              <li>
+                <div class="collapsible-header"><i class="material-icons grey-text">explore</i>Description</div>
                 <div class="collapsible-body"><span class="description">{{this.description}}</span></div>
               </li>
             </ul>

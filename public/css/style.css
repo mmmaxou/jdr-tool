@@ -22,9 +22,27 @@ img.icon {
   left: 13px;
 }
 
+img.prefix {
+  transform: scale(0.9) translateX(-7px);
+}
+
 .chip img {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  transform: scale(0.8);
+}
+
+.chip-right {
+  margin-left: 30px;
+}
+
+.btn-floating img {
+  width: 100%;
+}
+.scale-down {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
   transform: scale(0.8);
 }
 
@@ -32,7 +50,10 @@ img.icon {
   display: flex;
   flex-wrap: wrap;
 }
-
+.flex-h {
+  display: flex;
+  justify-content: space-between
+}
 .flex>* {
   width: 100%;
   text-align: center;

@@ -1,0 +1,24 @@
+<!-- Modal Structure -->
+<div id="dice" class="modal bottom-sheet">
+  <div class="modal-content container">
+    <div class="row">
+      <h4>Lancer un dé</h4>
+    </div>
+    <div class="row">
+      <p>Résultat : <span id="dice-result"></span></p>
+    </div>
+    <div class="row">
+      <div class="col s12 flex-h">
+        <button class="waves-effect waves-light btn rollDice" data-result-selector="#dice-result">d4</button>
+        <button class="waves-effect waves-light btn rollDice" data-result-selector="#dice-result">d6</button>
+        <button class="waves-effect waves-light btn rollDice" data-result-selector="#dice-result">d10</button>
+        <button class="waves-effect waves-light btn rollDice" data-result-selector="#dice-result">d20</button>
+        <button class="waves-effect waves-light btn rollDice" data-result-selector="#dice-result">d100</button>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Quitter</a>
+  </div>
+</div>

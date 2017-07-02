@@ -5,6 +5,7 @@
  */
 
 var express = require('express');
+var exphbs = require('express-handlebars');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -31,12 +32,16 @@ var app = express(),
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.engine('.hbs', exphbs({
+  defaultLayout: 'layout',
+  extname: '.hbs',
+  layoutsDir: path.join(__dirname, '/views/layouts/'),
+  partialsDir: path.join(__dirname, '/views/partials/')
+}));
+app.set('view engine', '.hbs');
 
-/**
- * Get port from environment and store in Express.
- */
 
+// Port setup
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -89,7 +94,7 @@ MongoClient.connect(config("mongo").url, function (err, database) {
     server.on('listening', onListening);
 
     // sockets.io
-    
+
     io = IoLogic(server, db)
   }
 });
